@@ -1,4 +1,0 @@
-(ns rest-utils.input)
-
-(defn extract [names m]
-  (vec (map m names)))
