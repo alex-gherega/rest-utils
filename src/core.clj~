@@ -1,0 +1,5 @@
+(ns rest-utils.core
+  (:require [rest-utils.input :as i]))
+
+(defn serve [service-fn parameter-names request]
+  (extract paramter-names request))
