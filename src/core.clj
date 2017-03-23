@@ -4,4 +4,4 @@
 (defn serve [service-fn
              parameter-names
              request]
-  (apply service-fn (in/extract paramter-names request)))
+  (apply service-fn (apply in/extract request parameter-names)))
