@@ -1,4 +1,5 @@
-(ns rest-utils.input)
+(ns rest-utils.input
+  (:require [clojure.repl :refer [doc]]))
 
 (defn filter-nils []
   (filter #(-> % nil? not)))
