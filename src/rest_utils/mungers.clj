@@ -11,7 +11,7 @@
                  })
    :default {s/Keyword s/Any}})
 
-(defn- munge-coercion [coerce-fn schema request-data]
+(defn munge-coercion [coerce-fn schema request-data]
   (coerce-fn schema
              (-> request-data first key defaults)
              (-> request-data first val)))
