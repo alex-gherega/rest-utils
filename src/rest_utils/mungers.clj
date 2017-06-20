@@ -3,7 +3,7 @@
             [rest-utils.schemas :as schemas]
             [rest-utils.coercers :as coercers]))
 
-(def defaults
+(def ^:dynamic defaults
   {:contactus {}
    :membership {}
    :clean (keys {:sharesshares s/Str ;; TODO: cleanup before sendin?
