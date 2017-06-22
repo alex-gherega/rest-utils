@@ -2,16 +2,15 @@
   (:require [schema.core :as s]
             [schema.spec.core :as spec]))
 
-(s/defschema contactus
+(s/defschema user
   {:email s/Str
-   :username s/Str
+   :name s/Str
    :address s/Str
-   :mobile s/Str
-   :postcode s/Str})
+   :mobile s/Str})
 
-(s/defschema membership {:member-email s/Str
-                         :member-name s/Str
-                         (s/optional-key :member-addr) s/Str
-                         :member-mobile s/Str
-                         :member-postcode s/Str
-                         :member-co s/Str})
+(s/defschema contactus
+  (merge user {:postcode s/Str}))
+
+(s/defschema membership
+  (merge user {:postcode s/Str
+               :company s/Str}))
